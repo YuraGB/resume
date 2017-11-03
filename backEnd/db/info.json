@@ -1,0 +1,78 @@
+{
+    "photo": {
+        "photo": "/style/photo/photoHeader.jpg",
+        "target": "I want to work a programmer or a tester",
+        "header": "Guryanov Yura",
+        "birthday": "04/05/1985",
+        "Adress": "Ukraine, town Ternopil, Chaldayev str. 1/46",
+        "phone": "+380673996678"
+    },
+    "work": {
+        "ГK Джерман Авто та Терко Авто": {
+            "period": {
+                "from": 2007,
+                "to": 2013
+            },
+            "post": "accountant",
+            "URL": "https://auto.ria.com/newauto/autosalons/ternopol/terko-avto-dzherman-avto/1700/?gclid=Cj0KCQjw9uHOBRDtARIsALtCa97J0RomdfBC8NK1Wc3Crl0dAgmCSzdL2dNVsaEJsQV-GS5kM3urAjcaAt7gEALw_wcB",
+            "picture": "/style/photo/Terko.jpeg"
+        },
+        "ТзОВ 'Механік'": {
+            "period": {
+                "from": 2014,
+                "to": 2015
+            },
+            "post": "accountant",
+            "URL": "фірма закрилась",
+            "picture": "/style/photo/JohnDeer.jpeg"
+        },
+        "ТзОВ 'САЮЗ'": {
+            "period": {
+                "from": 2015,
+                "to": 2017
+            },
+            "post": "accountant",
+            "URL": "https://www.eleyus.com/uk#!/grid/catalog/throttle:6/threshold:6/",
+            "picture": "/style/photo/SAUZ.png"
+        }
+
+    },
+    "hobbies": {
+        "code": {
+            "text": "I'm fond of to code last two years",
+            "period": "12.2015",
+            "picture": "/style/photo/CODE.jpeg",
+            "language": "Javascript",
+            "frameworks": "React, Redux, Ramda, JQuery, Node, express, mongo(DB), mangoose"
+        },
+        "SKI": {
+            "text": "It's my a new hobby. I'd like  to  enjoy it  for many  years",
+            "period": "2016",
+            "picture": "/style/photo/SKI.jpeg"
+        },
+        "reading literature": {
+            "text": "I didn't  like it  when i was younger, but now i'm sad because i don't have  much time  for it",
+            "period": "2013",
+            "favorite": "Jonathan Livingston Seagull, Citadel, Atlas Shrugged",
+            "picture": "/style/photo/READ.jpeg"
+        },
+        "GYM": {
+            "text": "The person must develop in all directions and i just live it",
+            "period": 2013,
+            "picture": "/style/photo/GYM.jpeg"
+        }
+
+    },
+    "About_me": {
+        "Plans for the future": ["Do the job what I like", "Try to travel as much as i can", "make the world better"],
+        "My  minuses": ["Sometimes  my motivation decrease", "I don't often  give people a credit of trust", "I don't have much practice of programming  with team"],
+        "My  pluses": ["I'm friendly", "I'm hard-working", "responsible", "communicable", "with a great desire to work as a programmer"],
+        "What i Know": {
+            "The resource of Ilya Kantor": "https://learn.javascript.ru",
+            "Canvas": "https://www.youtube.com/watch?v=Tmr85IaJpWI&list=PLpY_9m7gHQDgKMb4U2u8X8JU0lDlCYFQ4",
+            "SVG": "http://css-live.ru/category/svg",
+            "React+Redux": "https://rajdee.gitbooks.io/redux-in-russian/content/docs/introduction/"
+
+        }
+    }
+}

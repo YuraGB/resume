@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow-x: hidden;
+  min-width: 635px;
+  background: radial-gradient(ellipse at top, #eafb43, #797d73);
+
+  @media (min-width: 1500px) {
+    padding: 0 5%;
+  }
+
+  @import 'Header.css';
+  @import 'main.css';
+  @import "icons.css";
+
+  footer {
+    height: 2vw;
+    z-index: 8;
+    min-height: 20px;
+    position: relative;
+
+    section {
+      position: absolute;
+      right: 0;
+      background: linear-gradient(to bottom, rgba(177, 167, 16, 0.3) 0%, rgba(178, 110, 1, 0.01) 32%, rgb(70, 73, 60) 57%, rgb(111, 116, 92) 100%);
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      height: 100%;
+    }
+  }
+}

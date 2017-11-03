@@ -1,0 +1,173 @@
+:root {
+  --size: {
+    width: 100%;
+    height: 100%;
+  };
+}
+
+main {
+  height: 65vh;
+  display: flex;
+  align-self: center;
+  width: 80%;
+  min-height: 400px;
+  min-width: 507px;
+  position: relative;
+
+  h2 {
+    font-family: 'Archivo Narrow', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: bold;
+  }
+
+  .main {
+    @apply --size;
+
+    background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);
+    border: 1px solid;
+    box-shadow: -2px 3px 5px;
+
+    nav {
+      display: flex;
+      padding: 0.2em 0.5em;
+      text-align: center;
+      vertical-align: middle;
+      height: 3vh;
+      background: radial-gradient(ellipse at top, rgb(175, 180, 117) 6%, rgb(157, 165, 99) 22%, rgb(63, 65, 40) 44%, rgb(79, 82, 35) 77%, rgb(32, 35, 0) 100%);
+
+      link {
+        line-height: 1.4;
+        padding: 0.25em;
+        text-decoration: none;
+      }
+
+      .btn {
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 auto;
+        max-width: 160px;
+        position: relative;
+        text-decoration: none;
+        vertical-align: middle;
+        width: 100%;
+        transition: all 280ms ease-in-out;
+        background: radial-gradient(ellipse at top, rgb(74, 77, 36) 6%, rgb(77, 80, 36) 2%, rgb(72, 75, 37) 74%, rgba(43, 53, 64, 0.91) 97%, rgba(43, 53, 64, 1) 1%);
+
+        &:hover,
+        :active {
+          letter-spacing: 5px;
+        }
+
+        &::after,
+        ::before {
+          backface-visibility: hidden;
+          border: 1px solid rgba(74, 108, 208, 0.67);
+          bottom: 0;
+          content: " ";
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          transition: all 280ms ease-in-out;
+          width: 0;
+        }
+
+        &:hover::after,
+        :hover::before {
+          backface-visibility: hidden;
+          border-color: #fff;
+          transition: width 350ms ease-in-out;
+          width: 70%;
+        }
+
+        :hover::before {
+          bottom: auto;
+          top: 0;
+          width: 70%;
+        }
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      overflow: auto;
+      height: 59vh;
+      left: 0;
+      right: 0;
+      min-height: 368.07px;
+      border: 1px solid;
+
+      table {
+        @apply --size;
+
+        box-sizing: border-box;
+        padding: 1em;
+        align-content: center;
+      }
+
+      td {
+        width: 50%;
+        align-items: center;
+        border-bottom: 1px solid white;
+
+        & :hover {
+          transform: scale(1);
+        }
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        transition: all 0.3s;
+        transform: scale(0.8);
+        box-shadow: -5px 5px 5px rgba(55, 0, 22, 0.2);
+      }
+    }
+  }
+
+  .work {
+    background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);
+
+    ul {
+      list-style-type: none;
+
+      li {
+        height: 1em;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #069cbf;
+
+      & :visited {
+        color: gray;
+      }
+    }
+  }
+
+  .hobbies {
+    background: linear-gradient(105deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);
+    visibility: 0;
+    display: none;
+    overflow: auto;
+    right: -50rem;
+  }
+
+  .plForFtr {
+    height: 100%;
+    right: -50rem;
+    display: none;
+    visibility: 0;
+    background: linear-gradient(5deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);
+  }
+}

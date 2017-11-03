@@ -1,0 +1,23 @@
+.fb {
+  &::before {
+    content: url("/style/icons/facebook.svg");
+  }
+}
+
+.git {
+  &::before {
+    content: url("/style/icons/github.svg");
+  }
+}
+
+.vk {
+  &::before {
+    content: url("/style/icons/vk.svg");
+  }
+}
+
+.mail {
+  &::before {
+    content: url("/style/icons/email.svg");
+  }
+}
