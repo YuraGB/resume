@@ -3843,7 +3843,7 @@ var createTransitionManager = function createTransitionManager() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(445);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -4936,9 +4936,11 @@ var _ReducerPhoto = __webpack_require__(413);
 
 var _ReducerWork = __webpack_require__(414);
 
-var _initState = __webpack_require__(415);
+var _ReducerErr = __webpack_require__(415);
 
-var _mainBodyMiddleware = __webpack_require__(416);
+var _initState = __webpack_require__(416);
+
+var _mainBodyMiddleware = __webpack_require__(417);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4946,10 +4948,12 @@ var reducers = (0, _redux.combineReducers)({
     work: _ReducerWork.ReducerWork,
     hobbies: _ReducerHobbies.ReducerHobbies,
     aboutMe: _ReducerAbMe.ReducerAbMe,
-    photo: _ReducerPhoto.ReducerPhoto
+    photo: _ReducerPhoto.ReducerPhoto,
+    error: _ReducerErr.ReducerError
 });
 
 var store = (0, _redux.createStore)(reducers, (0, _redux.applyMiddleware)(_reduxThunk2.default, _mainBodyMiddleware.mainBodyMiddleware));
+
 store.dispatch((0, _initState.InitState)());
 
 var HeaderComponent = (0, _reactRedux.connect)(function (state) {
@@ -5939,7 +5943,7 @@ if (false) {
   checkDCE();
   module.exports = require('./cjs/react-dom.production.min.js');
 } else {
-  module.exports = __webpack_require__(417);
+  module.exports = __webpack_require__(419);
 }
 
 
@@ -11657,9 +11661,9 @@ var _reactRedux = __webpack_require__(102);
 
 var _reactDom = __webpack_require__(160);
 
-var _index3 = __webpack_require__(431);
+var _index3 = __webpack_require__(433);
 
-var _animation = __webpack_require__(448);
+var _animation = __webpack_require__(450);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11733,7 +11737,7 @@ exports = module.exports = __webpack_require__(70)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\r\n  font-family: \"Source Serif Pro\";\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: local(\"Source Serif Pro\"),local(SourceSerifPro-Regular),url(//fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55dwwSDTi-fDnWEQ0aekUnZc.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55fETq2ZMMnErnN6OL83eMrU.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55S0XUiYNEUS_1eNN5dXyLEY.woff) format(\"woff\");\r\n}\n@font-face {\r\n  font-family: \"Source Serif Pro\";\r\n  font-style: normal;\r\n  font-weight: 700;\r\n  src: local(\"Source Serif Pro Bold\"),local(SourceSerifPro-Bold),url(//fonts.gstatic.com/s/sourceserifpro/v4/yd5lDMt8Sva2PE17yiLarHGHMFftXZ5-UIRCa1apJEU.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/yd5lDMt8Sva2PE17yiLarPgHLTi6vdOOFgNDwEC6JgI.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/yd5lDMt8Sva2PE17yiLarEdEMi6hVZBf-Q2vYVxUiSc.woff) format(\"woff\");\r\n}\n@font-face {\r\n  font-family: \"Archivo Narrow\";\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: local(\"Archivo Narrow Regular\"),local(ArchivoNarrow-Regular),url(//fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXpj9sG6gyxihQGrqfBiBoCNc.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXpkU-p1xzoRgkupcXIqgYFBc.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXphdbPw3QSf9R-kE0EsQUn2A.woff) format(\"woff\");\r\n}\n@font-face {\r\n  font-family: \"Archivo Narrow\";\r\n  font-style: normal;\r\n  font-weight: 700;\r\n  src: local(\"Archivo Narrow Bold\"),local(ArchivoNarrow-Bold),url(//fonts.gstatic.com/s/archivonarrow/v5/M__Wu4PAmHf4YZvQM8tWsGT4ZFB4cX9NxOgt4NwF8dg.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/archivonarrow/v5/M__Wu4PAmHf4YZvQM8tWsBKUK2vxztsQZZBkxIuj92o.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/archivonarrow/v5/M__Wu4PAmHf4YZvQM8tWsCylde52zikAzebNtJS89aM.woff) format(\"woff\");\r\n}\nmain {\r\n  height: 65vh;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-item-align: center;\r\n      align-self: center;\r\n  width: 80%;\r\n  min-height: 400px;\r\n  min-width: 507px;\r\n  position: relative;\r\n}\nmain h2 {\r\n    font-family: 'Archivo Narrow', sans-serif;\r\n    text-align: center;\r\n    text-decoration: underline;\r\n  }\nmain h3 {\r\n    font-family: 'Source Serif Pro', serif;\r\n    font-weight: 700;\r\n  }\nmain .main {\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n    background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n    border: 1px solid;\r\n    -webkit-box-shadow: -2px 3px 5px;\r\n            box-shadow: -2px 3px 5px;\r\n  }\nmain .main nav {\r\n      display: -webkit-box;\r\n      display: -ms-flexbox;\r\n      display: flex;\r\n      padding: 0.2em 0.5em;\r\n      text-align: center;\r\n      vertical-align: middle;\r\n      height: 3vh;\r\n      background: radial-gradient(ellipse at top, rgb(175, 180, 117) 6%, rgb(157, 165, 99) 22%, rgb(63, 65, 40) 44%, rgb(79, 82, 35) 77%, rgb(32, 35, 0) 100%);\r\n    }\nmain .main nav link {\r\n        line-height: 1.4;\r\n        padding: 0.25em;\r\n        text-decoration: none;\r\n      }\nmain .main nav .btn {\r\n        color: #fff;\r\n        cursor: pointer;\r\n        display: block;\r\n        font-size: 16px;\r\n        font-weight: 400;\r\n        margin: 0 auto;\r\n        max-width: 160px;\r\n        position: relative;\r\n        text-decoration: none;\r\n        vertical-align: middle;\r\n        width: 100%;\r\n        -webkit-transition: all 280ms ease-in-out;\r\n        transition: all 280ms ease-in-out;\r\n        background: radial-gradient(ellipse at top, rgb(74, 77, 36) 6%, rgb(77, 80, 36) 2%, rgb(72, 75, 37) 74%, rgba(43, 53, 64, .91) 97%, rgba(43, 53, 64, 1) 1%);\r\n      }\nmain .main nav .btn:hover,\r\n        main .main nav .btn :active {\r\n          letter-spacing: 5px;\r\n        }\nmain .main nav .btn::after,\r\n        main .main nav .btn ::before {\r\n          -webkit-backface-visibility: hidden;\r\n                  backface-visibility: hidden;\r\n          border: 1px solid rgba(74, 108, 208, .67);\r\n          bottom: 0;\r\n          content: \" \";\r\n          display: block;\r\n          margin: 0 auto;\r\n          position: relative;\r\n          -webkit-transition: all 280ms ease-in-out;\r\n          transition: all 280ms ease-in-out;\r\n          width: 0;\r\n        }\nmain .main nav .btn:hover::after,\r\n        main .main nav .btn :hover::before {\r\n          -webkit-backface-visibility: hidden;\r\n                  backface-visibility: hidden;\r\n          border-color: #fff;\r\n          -webkit-transition: width 350ms ease-in-out;\r\n          transition: width 350ms ease-in-out;\r\n          width: 70%;\r\n        }\nmain .main nav .btn :hover::before {\r\n          bottom: auto;\r\n          top: 0;\r\n          width: 70%;\r\n        }\nmain .main section {\r\n      display: -webkit-box;\r\n      display: -ms-flexbox;\r\n      display: flex;\r\n      -webkit-box-orient: vertical;\r\n      -webkit-box-direction: normal;\r\n          -ms-flex-direction: column;\r\n              flex-direction: column;\r\n      position: absolute;\r\n      overflow: auto;\r\n      height: 59vh;\r\n      left: 0;\r\n      right: 0;\r\n      min-height: 368.07px;\r\n      border: 1px solid;\r\n    }\nmain .main section table {\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n        -webkit-box-sizing: border-box;\r\n\r\n                box-sizing: border-box;\r\n        padding: 1em;\r\n        -ms-flex-line-pack: center;\r\n            align-content: center;\r\n      }\nmain .main section td {\r\n        width: 50%;\r\n        -webkit-box-align: center;\r\n            -ms-flex-align: center;\r\n                align-items: center;\r\n        border-bottom: 1px solid white\r\n      }\nmain .main section td :hover {\r\n        -webkit-transform: scale(1);\r\n                transform: scale(1);\r\n}\nmain .main section img {\r\n        display: block;\r\n        margin: 0 auto;\r\n        -webkit-transition: all 0.3s;\r\n        transition: all 0.3s;\r\n        -webkit-transform: scale(0.8);\r\n                transform: scale(0.8);\r\n        -webkit-box-shadow: -5px 5px 5px rgba(55, 0, 22, .2);\r\n                box-shadow: -5px 5px 5px rgba(55, 0, 22, .2);\r\n      }\nmain .work {\r\n    background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n  }\nmain .work ul {\r\n      list-style-type: none;\r\n    }\nmain .work ul li {\r\n        height: 1em;\r\n      }\nmain .work a {\r\n      text-decoration: none;\r\n      color: #069cbf\r\n    }\nmain .work a :visited {\r\n  color: gray;\r\n}\nmain .hobbies {\r\n    background: linear-gradient(105deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n    visibility: 0;\r\n    display: none;\r\n    overflow: auto;\r\n    right: -50rem;\r\n  }\nmain .plForFtr {\r\n    height: 100%;\r\n    right: -50rem;\r\n    display: none;\r\n    visibility: 0;\r\n    background: linear-gradient(5deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n  }\r\n", ""]);
+exports.push([module.i, "@font-face {\r\n  font-family: \"Source Serif Pro\";\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: local(\"Source Serif Pro\"),local(SourceSerifPro-Regular),url(//fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55dwwSDTi-fDnWEQ0aekUnZc.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55fETq2ZMMnErnN6OL83eMrU.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/CeUM4np2c42DV49nanp55S0XUiYNEUS_1eNN5dXyLEY.woff) format(\"woff\");\r\n}\n@font-face {\r\n  font-family: \"Source Serif Pro\";\r\n  font-style: normal;\r\n  font-weight: 700;\r\n  src: local(\"Source Serif Pro Bold\"),local(SourceSerifPro-Bold),url(//fonts.gstatic.com/s/sourceserifpro/v4/yd5lDMt8Sva2PE17yiLarHGHMFftXZ5-UIRCa1apJEU.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/yd5lDMt8Sva2PE17yiLarPgHLTi6vdOOFgNDwEC6JgI.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/sourceserifpro/v4/yd5lDMt8Sva2PE17yiLarEdEMi6hVZBf-Q2vYVxUiSc.woff) format(\"woff\");\r\n}\n@font-face {\r\n  font-family: \"Archivo Narrow\";\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  src: local(\"Archivo Narrow Regular\"),local(ArchivoNarrow-Regular),url(//fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXpj9sG6gyxihQGrqfBiBoCNc.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXpkU-p1xzoRgkupcXIqgYFBc.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/archivonarrow/v5/DsLzC9scoPnrGiwYYMQXphdbPw3QSf9R-kE0EsQUn2A.woff) format(\"woff\");\r\n}\n@font-face {\r\n  font-family: \"Archivo Narrow\";\r\n  font-style: normal;\r\n  font-weight: 700;\r\n  src: local(\"Archivo Narrow Bold\"),local(ArchivoNarrow-Bold),url(//fonts.gstatic.com/s/archivonarrow/v5/M__Wu4PAmHf4YZvQM8tWsGT4ZFB4cX9NxOgt4NwF8dg.eot?#) format(\"eot\"),url(//fonts.gstatic.com/s/archivonarrow/v5/M__Wu4PAmHf4YZvQM8tWsBKUK2vxztsQZZBkxIuj92o.woff2) format(\"woff2\"),url(//fonts.gstatic.com/s/archivonarrow/v5/M__Wu4PAmHf4YZvQM8tWsCylde52zikAzebNtJS89aM.woff) format(\"woff\");\r\n}\nmain {\r\n  height: 65vh;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-item-align: center;\r\n      align-self: center;\r\n  width: 80%;\r\n  min-height: 400px;\r\n  min-width: 507px;\r\n  position: relative;\r\n}\nmain h2 {\r\n    font-family: 'Archivo Narrow', sans-serif;\r\n    text-align: center;\r\n    text-decoration: underline;\r\n  }\nmain h3 {\r\n    font-family: 'Source Serif Pro', serif;\r\n    font-weight: 700;\r\n  }\nmain .main {\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n    background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n    border: 1px solid;\r\n    -webkit-box-shadow: -2px 3px 5px;\r\n            box-shadow: -2px 3px 5px;\r\n  }\nmain .main nav {\r\n      display: -webkit-box;\r\n      display: -ms-flexbox;\r\n      display: flex;\r\n      padding: 0.2em 0.5em;\r\n      text-align: center;\r\n      vertical-align: middle;\r\n      height: 3vh;\r\n      background: radial-gradient(ellipse at top, rgb(175, 180, 117) 6%, rgb(157, 165, 99) 22%, rgb(63, 65, 40) 44%, rgb(79, 82, 35) 77%, rgb(32, 35, 0) 100%);\r\n    }\nmain .main nav link {\r\n        line-height: 1.4;\r\n        padding: 0.25em;\r\n        text-decoration: none;\r\n      }\nmain .main nav .btn {\r\n        color: #fff;\r\n        cursor: pointer;\r\n        display: block;\r\n        font-size: 16px;\r\n        font-weight: 400;\r\n        margin: 0 auto;\r\n        max-width: 160px;\r\n        position: relative;\r\n        text-decoration: none;\r\n        vertical-align: middle;\r\n        width: 100%;\r\n        -webkit-transition: all 280ms ease-in-out;\r\n        transition: all 280ms ease-in-out;\r\n        background: radial-gradient(ellipse at top, rgb(74, 77, 36) 6%, rgb(77, 80, 36) 2%, rgb(72, 75, 37) 74%, rgba(43, 53, 64, .91) 97%, rgba(43, 53, 64, 1) 1%);\r\n      }\nmain .main nav .btn:hover,\r\n        main .main nav .btn :active {\r\n          letter-spacing: 5px;\r\n        }\nmain .main nav .btn::after,\r\n        main .main nav .btn ::before {\r\n          -webkit-backface-visibility: hidden;\r\n                  backface-visibility: hidden;\r\n          border: 1px solid rgba(74, 108, 208, .67);\r\n          bottom: 0;\r\n          content: \" \";\r\n          display: block;\r\n          margin: 0 auto;\r\n          position: relative;\r\n          -webkit-transition: all 280ms ease-in-out;\r\n          transition: all 280ms ease-in-out;\r\n          width: 0;\r\n        }\nmain .main nav .btn:hover::after,\r\n        main .main nav .btn :hover::before {\r\n          -webkit-backface-visibility: hidden;\r\n                  backface-visibility: hidden;\r\n          border-color: #fff;\r\n          -webkit-transition: width 350ms ease-in-out;\r\n          transition: width 350ms ease-in-out;\r\n          width: 70%;\r\n        }\nmain .main nav .btn :hover::before {\r\n          bottom: auto;\r\n          top: 0;\r\n          width: 70%;\r\n        }\nmain .main section {\r\n      display: -webkit-box;\r\n      display: -ms-flexbox;\r\n      display: flex;\r\n      -webkit-box-orient: vertical;\r\n      -webkit-box-direction: normal;\r\n          -ms-flex-direction: column;\r\n              flex-direction: column;\r\n      position: absolute;\r\n      overflow: auto;\r\n      height: 59vh;\r\n      left: 0;\r\n      right: 0;\r\n      min-height: 368.07px;\r\n      border: 1px solid;\r\n    }\nmain .main section table {\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n        -webkit-box-sizing: border-box;\r\n\r\n                box-sizing: border-box;\r\n        padding: 1em;\r\n        -ms-flex-line-pack: center;\r\n            align-content: center;\r\n      }\nmain .main section td {\r\n        width: 50%;\r\n        -webkit-box-align: center;\r\n            -ms-flex-align: center;\r\n                align-items: center;\r\n        border-bottom: 1px solid white\r\n      }\nmain .main section td :hover {\r\n        -webkit-transform: scale(1);\r\n                transform: scale(1);\r\n}\nmain .main section img {\r\n        display: block;\r\n        margin: 0 auto;\r\n        -webkit-transition: all 0.3s;\r\n        transition: all 0.3s;\r\n        -webkit-transform: scale(0.8);\r\n                transform: scale(0.8);\r\n        -webkit-box-shadow: -5px 5px 5px rgba(55, 0, 22, .2);\r\n                box-shadow: -5px 5px 5px rgba(55, 0, 22, .2);\r\n      }\nmain .work {\r\n    background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n  }\nmain .work ul {\r\n      list-style-type: none;\r\n    }\nmain .work ul li {\r\n        height: 1em;\r\n      }\nmain .work a {\r\n      text-decoration: none;\r\n      color: #069cbf\r\n    }\nmain .work a :visited {\r\n  color: gray;\r\n}\nmain .hobbies {\r\n    background: linear-gradient(105deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n    visibility: 0;\r\n    display: none;\r\n    overflow: auto;\r\n    right: -50rem;\r\n  }\nmain .plForFtr {\r\n    height: 100%;\r\n    right: -50rem;\r\n    display: none;\r\n    visibility: 0;\r\n    background: linear-gradient(5deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);\r\n  }\n.error {\r\n  color: #5c1100;\r\n  background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(196, 106, 83) 100%);\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n}\n.error img {\r\n    width: 200px;\r\n    height: 200px;\r\n    -webkit-box-shadow: none;\r\n            box-shadow: none;\r\n  }\r\n", ""]);
 
 // exports
 
@@ -15791,30 +15795,32 @@ var MainBody = exports.MainBody = function MainBody(_ref) {
         aboutMe = _ref.aboutMe,
         dispatchWork = _ref.dispatchWork,
         dispatchHobbies = _ref.dispatchHobbies,
-        dispatchAbMe = _ref.dispatchAbMe;
+        dispatchAbMe = _ref.dispatchAbMe,
+        error = _ref.error;
+
 
     function onClick(event) {
         event.preventDefault();
-        console.log(!!work.list, !!hobbies.list, !!aboutMe.every);
+        console.log(!work.list);
 
         if (!work.list && event.target.getAttribute('data-block') === "#work") {
             return dispatchWork();
         } else if (!hobbies.list && event.target.getAttribute('data-block') === "hobbies") {
-            console.log("HEREEE");
+
             return dispatchHobbies();
         } else if (!!aboutMe.every && event.target.getAttribute('data-block') === "plForFtr") {
-            console.log("plForFtr");
+
             return dispatchAbMe();
         }
     }
-
+    console.log(hobbies, aboutMe, work);
     return _react2.default.createElement(
         'article',
         { className: 'main' },
         _react2.default.createElement(_MainNavSection.MainNavSection, { onClick: onClick }),
-        _react2.default.createElement(_sectionHobbies.SectionHobbies, { hobbies: hobbies }),
-        _react2.default.createElement(_SectionAbMe.SectionAbMe, { aboutMe: aboutMe }),
-        _react2.default.createElement(_SectionWork.SectionWork, { work: work })
+        _react2.default.createElement(_sectionHobbies.SectionHobbies, { hobbies: hobbies, err: error }),
+        _react2.default.createElement(_SectionAbMe.SectionAbMe, { aboutMe: aboutMe, err: error }),
+        _react2.default.createElement(_SectionWork.SectionWork, { work: work, err: error })
     );
 };
 
@@ -15837,16 +15843,17 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SectionHobbies = exports.SectionHobbies = function SectionHobbies(_ref) {
-    var hobbies = _ref.hobbies;
+    var hobbies = _ref.hobbies,
+        err = _ref.err;
 
     return _react2.default.createElement(
         "section",
         { className: "tab hobbies" },
-        _react2.default.createElement(
+        hobbies.title ? _react2.default.createElement(
             "h2",
             null,
             hobbies.title
-        ),
+        ) : [],
         hobbies.list ? _react2.default.createElement(
             "table",
             null,
@@ -15954,7 +15961,18 @@ var SectionHobbies = exports.SectionHobbies = function SectionHobbies(_ref) {
                     );
                 })
             )
-        ) : []
+        ) : err ? function () {
+            return _react2.default.createElement(
+                "section",
+                { className: "error" },
+                _react2.default.createElement("img", { src: err.img, alt: "Error" }),
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    err.text
+                )
+            );
+        }() : []
     );
 };
 
@@ -15977,16 +15995,17 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SectionWork = exports.SectionWork = function SectionWork(_ref) {
-    var work = _ref.work;
+    var work = _ref.work,
+        err = _ref.err;
 
     return _react2.default.createElement(
         "section",
         { className: "tab work" },
-        _react2.default.createElement(
+        work.title ? _react2.default.createElement(
             "h2",
             null,
             work.title
-        ),
+        ) : [],
         work.list ? _react2.default.createElement(
             "table",
             null,
@@ -16065,7 +16084,18 @@ var SectionWork = exports.SectionWork = function SectionWork(_ref) {
                     );
                 })
             )
-        ) : []
+        ) : err ? function () {
+            return _react2.default.createElement(
+                "section",
+                { className: "error" },
+                _react2.default.createElement("img", { src: err.img, alt: "Error" }),
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    err.text
+                )
+            );
+        }() : []
     );
 };
 
@@ -16130,11 +16160,14 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SectionAbMe = exports.SectionAbMe = function SectionAbMe(_ref) {
-    var aboutMe = _ref.aboutMe;
+    var aboutMe = _ref.aboutMe,
+        err = _ref.err;
+
+    console.log(aboutMe.map);
     return _react2.default.createElement(
         "section",
         { className: "tab plForFtr" },
-        aboutMe ? Object.keys(aboutMe).map(function (element, key) {
+        !aboutMe.map ? Object.keys(aboutMe).map(function (element, key) {
 
             return _react2.default.createElement(
                 "ul",
@@ -16165,7 +16198,18 @@ var SectionAbMe = exports.SectionAbMe = function SectionAbMe(_ref) {
                     );
                 })
             );
-        }) : []
+        }) : err ? function () {
+            return _react2.default.createElement(
+                "section",
+                { className: "error" },
+                _react2.default.createElement("img", { src: err.img, alt: "Error" }),
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    err.text
+                )
+            );
+        }() : []
     );
 };
 
@@ -16261,7 +16305,28 @@ var ReducerWork = exports.ReducerWork = function ReducerWork() {
 
 
 Object.defineProperty(exports, "__esModule", {
-            value: true
+    value: true
+});
+var ReducerError = exports.ReducerError = function ReducerError() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var action = arguments[1];
+
+
+    if (action.type === "Error") {
+        return action.err;
+    }
+    return state;
+};
+
+/***/ }),
+/* 416 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
 });
 exports.InitState = undefined;
 
@@ -16270,14 +16335,14 @@ var _ActionCrWork = __webpack_require__(105);
 var _ActionCrHdrPhoto = __webpack_require__(159);
 
 var InitState = exports.InitState = function InitState() {
-            return function (dispatch) {
-                        dispatch((0, _ActionCrHdrPhoto.ActionCrPhoto)());
-                        dispatch((0, _ActionCrWork.ActionCrWork)());
-            };
+    return function (dispatch) {
+        dispatch((0, _ActionCrHdrPhoto.ActionCrPhoto)());
+        dispatch((0, _ActionCrWork.ActionCrWork)());
+    };
 };
 
 /***/ }),
-/* 416 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16300,61 +16365,94 @@ var _ActionCrHobbies = __webpack_require__(157);
 
 var _ActionCrAbMe = __webpack_require__(158);
 
+var _ActionCrError = __webpack_require__(418);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mainBodyMiddleware = exports.mainBodyMiddleware = function mainBodyMiddleware(store) {
     return function (next) {
         return function (action) {
+            try {
+                switch (action.type) {
+                    case "WORK":
+                        {
+                            fetch("/work").then(function (response) {
+                                return response.json();
+                            }).then(function (json) {
+                                return next((0, _ActionCrWork.ActionCrWork)(json.work));
+                            }).catch(function (e) {
+                                return next((0, _ActionCrError.ActionCrError)());
+                            });
+                            break;
+                        }
+                    case "HOBBIES":
+                        {
+                            fetch("/hobbies").then(function (response) {
+                                return response.json();
+                            }).then(function (json) {
+                                return next((0, _ActionCrHobbies.ActionCrHobbies)(json.hobbies));
+                            }).catch(function (e) {
+                                return next((0, _ActionCrError.ActionCrError)());
+                            });
+                            break;
+                        }
+                    case "PHOTO":
+                        {
+                            fetch("/photo").then(function (response) {
+                                return response.json();
+                            }).then(function (json) {
+                                return next((0, _ActionCrHdrPhoto.ActionCrPhoto)(json));
+                            }).catch(function (e) {
+                                return next((0, _ActionCrError.ActionCrError)());
+                            });
+                            break;
+                        }
+                    case "ABOUT_ME":
+                        {
+                            fetch("/aboutMe").then(function (response) {
+                                return response.json();
+                            }).then(function (json) {
+                                return next((0, _ActionCrAbMe.ActionCrAboutMe)(json.AboutMe));
+                            }).catch(function (e) {
+                                return next((0, _ActionCrError.ActionCrError)());
+                            });
+                            break;
+                        }
 
-            switch (action.type) {
-                case "WORK":
-                    {
-                        fetch("/work").then(function (response) {
-                            return response.json();
-                        }).then(function (json) {
-                            return next((0, _ActionCrWork.ActionCrWork)(json.work));
-                        });
-                        break;
-                    }
-                case "HOBBIES":
-                    {
-                        fetch("/hobbies").then(function (response) {
-                            return response.json();
-                        }).then(function (json) {
-                            return next((0, _ActionCrHobbies.ActionCrHobbies)(json.hobbies));
-                        });
-                        break;
-                    }
-                case "PHOTO":
-                    {
-                        fetch("/photo").then(function (response) {
-                            return response.json();
-                        }).then(function (json) {
-                            return next((0, _ActionCrHdrPhoto.ActionCrPhoto)(json));
-                        });
-                        break;
-                    }
-                case "ABOUT_ME":
-                    {
-                        fetch("/aboutMe").then(function (response) {
-                            return response.json();
-                        }).then(function (json) {
-                            return next((0, _ActionCrAbMe.ActionCrAboutMe)(json));
-                        });
-                        break;
-                    }
-
-                default:
-                    {
-                        return next(action);
-                    }
-            }
+                    default:
+                        {
+                            return next(action);
+                        }
+                }
+            } catch (e) {
+                console.log(e);
+            };
         };
     };
 };
 
 /***/ }),
-/* 417 */
+/* 418 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var ActionCrError = exports.ActionCrError = function ActionCrError() {
+    return {
+        type: "Error",
+        err: {
+            text: "Oops,something  went wrong. We are sorry :(",
+            img: "/style/photo/Error.png"
+        }
+    };
+};
+
+/***/ }),
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16378,19 +16476,19 @@ var react = __webpack_require__(6);
 var invariant = __webpack_require__(72);
 var ExecutionEnvironment = __webpack_require__(161);
 var _assign = __webpack_require__(100);
-var EventListener = __webpack_require__(418);
+var EventListener = __webpack_require__(420);
 var require$$0 = __webpack_require__(71);
-var hyphenateStyleName = __webpack_require__(419);
+var hyphenateStyleName = __webpack_require__(421);
 var emptyFunction = __webpack_require__(53);
-var camelizeStyleName = __webpack_require__(421);
-var performanceNow = __webpack_require__(423);
+var camelizeStyleName = __webpack_require__(423);
+var performanceNow = __webpack_require__(425);
 var propTypes = __webpack_require__(23);
 var emptyObject = __webpack_require__(144);
 var checkPropTypes = __webpack_require__(101);
-var shallowEqual = __webpack_require__(425);
-var containsNode = __webpack_require__(426);
-var focusNode = __webpack_require__(429);
-var getActiveElement = __webpack_require__(430);
+var shallowEqual = __webpack_require__(427);
+var containsNode = __webpack_require__(428);
+var focusNode = __webpack_require__(431);
+var getActiveElement = __webpack_require__(432);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -33582,7 +33680,7 @@ module.exports = ReactDOMFiberEntry;
 
 
 /***/ }),
-/* 418 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33662,7 +33760,7 @@ var EventListener = {
 module.exports = EventListener;
 
 /***/ }),
-/* 419 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33677,7 +33775,7 @@ module.exports = EventListener;
 
 
 
-var hyphenate = __webpack_require__(420);
+var hyphenate = __webpack_require__(422);
 
 var msPattern = /^ms-/;
 
@@ -33704,7 +33802,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 420 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33740,7 +33838,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 421 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33755,7 +33853,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(422);
+var camelize = __webpack_require__(424);
 
 var msPattern = /^-ms-/;
 
@@ -33783,7 +33881,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 422 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33818,7 +33916,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 423 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33833,7 +33931,7 @@ module.exports = camelize;
  * @typechecks
  */
 
-var performance = __webpack_require__(424);
+var performance = __webpack_require__(426);
 
 var performanceNow;
 
@@ -33855,7 +33953,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 424 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33881,7 +33979,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 425 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33952,7 +34050,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 426 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33967,7 +34065,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(427);
+var isTextNode = __webpack_require__(429);
 
 /*eslint-disable no-bitwise */
 
@@ -33995,7 +34093,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 427 */
+/* 429 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34010,7 +34108,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(428);
+var isNode = __webpack_require__(430);
 
 /**
  * @param {*} object The object to check.
@@ -34023,7 +34121,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 428 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34051,7 +34149,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 429 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34081,7 +34179,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 430 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34123,7 +34221,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 431 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34144,7 +34242,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _Main = __webpack_require__(146);
 
-var _reactRouter = __webpack_require__(432);
+var _reactRouter = __webpack_require__(434);
 
 var _reactRedux = __webpack_require__(102);
 
@@ -34171,28 +34269,28 @@ var FooterElement = exports.FooterElement = function () {
 }();
 
 /***/ }),
-/* 432 */
+/* 434 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(433);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(435);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(439);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_1__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(440);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(165);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(107);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(447);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(446);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(448);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(109);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_7__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(447);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(449);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_8__withRouter__["a"]; });
 
 
@@ -34214,7 +34312,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 433 */
+/* 435 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34224,7 +34322,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(436);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(107);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34281,7 +34379,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 434 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34299,9 +34397,9 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _PathUtils = __webpack_require__(106);
 
-var _LocationUtils = __webpack_require__(435);
+var _LocationUtils = __webpack_require__(437);
 
-var _createTransitionManager = __webpack_require__(436);
+var _createTransitionManager = __webpack_require__(438);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -34457,7 +34555,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 435 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34541,7 +34639,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 
 /***/ }),
-/* 436 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34632,7 +34730,7 @@ var createTransitionManager = function createTransitionManager() {
 exports.default = createTransitionManager;
 
 /***/ }),
-/* 437 */
+/* 439 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34723,7 +34821,7 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 438 */
+/* 440 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34735,7 +34833,7 @@ Prompt.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(439);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(441);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -34831,15 +34929,15 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 439 */
+/* 441 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(440);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(442);
 /* unused harmony reexport createBrowserHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(441);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(443);
 /* unused harmony reexport createHashHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(444);
 /* unused harmony reexport createMemoryHistory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(73);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
@@ -34858,7 +34956,7 @@ Redirect.contextTypes = {
 
 
 /***/ }),
-/* 440 */
+/* 442 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35162,7 +35260,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createBrowserHistory);
 
 /***/ }),
-/* 441 */
+/* 443 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35483,7 +35581,7 @@ var createHashHistory = function createHashHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
 
 /***/ }),
-/* 442 */
+/* 444 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35651,10 +35749,10 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createMemoryHistory);
 
 /***/ }),
-/* 443 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(444)
+var isarray = __webpack_require__(446)
 
 /**
  * Expose `pathToRegexp`.
@@ -36083,7 +36181,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 444 */
+/* 446 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -36092,7 +36190,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 445 */
+/* 447 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36275,7 +36373,7 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 446 */
+/* 448 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36369,7 +36467,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 447 */
+/* 449 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36414,7 +36512,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 448 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

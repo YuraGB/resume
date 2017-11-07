@@ -12,19 +12,22 @@ import { ReducerAbMe } from './Reducers/ReducerAbMe';
 import { ReducerHobbies } from './Reducers/ReducerHobbies';
 import { ReducerPhoto } from './Reducers/ReducerPhoto';
 import { ReducerWork } from './Reducers/ReducerWork';
+import { ReducerError } from './Reducers/ReducerErr';
 import { InitState } from './InitSatate/initState';
 import { mainBodyMiddleware } from './Requests/asyncMiddleware/mainBodyMiddleware';
 
 
-const reducers = combineReducers({
-    work: ReducerWork,
-    hobbies: ReducerHobbies,
-    aboutMe: ReducerAbMe,
-    photo: ReducerPhoto
-});
+    const reducers = combineReducers({
+        work: ReducerWork,
+        hobbies: ReducerHobbies,
+        aboutMe: ReducerAbMe,
+        photo: ReducerPhoto,
+        error: ReducerError
+    });
 
-const store = createStore(reducers, applyMiddleware(thunk, mainBodyMiddleware));
-store.dispatch(InitState());
+    const store = createStore(reducers, applyMiddleware(thunk, mainBodyMiddleware));
+
+    store.dispatch(InitState());
 
 
 

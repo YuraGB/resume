@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const SectionHobbies = ({hobbies}) => {
+export const SectionHobbies = ({hobbies, err}) => {
     return(
         <section className="tab hobbies">
-            <h2>{hobbies.title}</h2>
+            {hobbies.title?<h2>{hobbies.title}</h2>:[]}
             {  hobbies.list ?
                 (   <table>
                     <tbody>
@@ -27,7 +27,13 @@ export const SectionHobbies = ({hobbies}) => {
                         )
                     )}
                     </tbody>
-                </table>):[]}
+                </table>):
+
+                err?(()=>(
+                    <section className="error">
+                        <img src={err.img} alt="Error"/>
+                        <h2>{err.text}</h2>
+                    </section>))():[]}
 
         </section>
 

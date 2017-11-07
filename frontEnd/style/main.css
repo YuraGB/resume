@@ -171,3 +171,15 @@ main {
     background: linear-gradient(5deg, rgba(69, 72, 77, 1) 0%, rgb(231, 241, 125) 100%);
   }
 }
+
+.error {
+  color: #5c1100;
+  background: linear-gradient(135deg, rgba(69, 72, 77, 1) 0%, rgb(196, 106, 83) 100%);
+  box-sizing: border-box;
+
+  img {
+    width: 200px;
+    height: 200px;
+    box-shadow: none;
+  }
+}

@@ -4,8 +4,9 @@ import { ActionCrPhoto } from '../Actions/ActionCrHdrPhoto';
 
 
 export const InitState =  () => {
-    return  dispatch => {
-                dispatch(ActionCrPhoto());
-                dispatch(ActionCrWork());
-            };
+    return dispatch => {
+            dispatch(ActionCrPhoto());
+            dispatch(ActionCrWork());
+
+    };
 };

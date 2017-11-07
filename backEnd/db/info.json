@@ -63,7 +63,7 @@
         }
 
     },
-    "About_me": {
+     "About_me": {
         "Plans for the future": ["Do the job what I like", "Try to travel as much as i can", "make the world better"],
         "My  minuses": ["Sometimes  my motivation decrease", "I don't often  give people a credit of trust", "I don't have much practice of programming  with team"],
         "My  pluses": ["I'm friendly", "I'm hard-working", "responsible", "communicable", "with a great desire to work as a programmer"],
@@ -75,4 +75,5 @@
 
         }
     }
+
 }
