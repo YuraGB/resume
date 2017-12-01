@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const SectionAbMe = ({aboutMe, err}) => {
-    console.log(aboutMe.map);
+   
     return(
         <section className="tab plForFtr">
             {

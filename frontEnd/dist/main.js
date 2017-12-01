@@ -15801,7 +15801,6 @@ var MainBody = exports.MainBody = function MainBody(_ref) {
 
     function onClick(event) {
         event.preventDefault();
-        console.log(!work.list);
 
         if (!work.list && event.target.getAttribute('data-block') === "#work") {
             return dispatchWork();
@@ -15813,7 +15812,7 @@ var MainBody = exports.MainBody = function MainBody(_ref) {
             return dispatchAbMe();
         }
     }
-    console.log(hobbies, aboutMe, work);
+
     return _react2.default.createElement(
         'article',
         { className: 'main' },
@@ -16163,7 +16162,7 @@ var SectionAbMe = exports.SectionAbMe = function SectionAbMe(_ref) {
     var aboutMe = _ref.aboutMe,
         err = _ref.err;
 
-    console.log(aboutMe.map);
+
     return _react2.default.createElement(
         "section",
         { className: "tab plForFtr" },
