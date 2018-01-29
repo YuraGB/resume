@@ -8,7 +8,6 @@ export const MainBody = ({work, hobbies, aboutMe, dispatchWork, dispatchHobbies,
 
     function onClick (event) {
         event.preventDefault();
-        
 
         if (!work.list && (event.target.getAttribute('data-block')==="#work")){
            return dispatchWork();
@@ -24,7 +23,7 @@ export const MainBody = ({work, hobbies, aboutMe, dispatchWork, dispatchHobbies,
     }
 
    return (
-        <article className='main'>
+        <article className="main">
             <MainNavSection onClick={onClick}/>
             <SectionHobbies hobbies={hobbies} err={error}/>
             <SectionAbMe aboutMe={aboutMe} err={error}/>

@@ -17,17 +17,17 @@ import { InitState } from './InitSatate/initState';
 import { mainBodyMiddleware } from './Requests/asyncMiddleware/mainBodyMiddleware';
 
 
-    const reducers = combineReducers({
-        work: ReducerWork,
-        hobbies: ReducerHobbies,
-        aboutMe: ReducerAbMe,
-        photo: ReducerPhoto,
-        error: ReducerError
-    });
+const reducers = combineReducers({
+    work: ReducerWork,
+    hobbies: ReducerHobbies,
+    aboutMe: ReducerAbMe,
+    photo: ReducerPhoto,
+    error: ReducerError
+});
 
-    const store = createStore(reducers, applyMiddleware(thunk, mainBodyMiddleware));
+const store = createStore(reducers, applyMiddleware(thunk, mainBodyMiddleware));
 
-    store.dispatch(InitState());
+store.dispatch(InitState());
 
 
 

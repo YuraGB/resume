@@ -3,7 +3,7 @@ const path = require("path");
 const webpack = require("webpack");
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const fontMagician = require('postcss-font-magician');
-console.log(fontMagician);
+
 
 module.exports = {
     entry: ['babel-polyfill','./frontEnd/src/index.js'],
