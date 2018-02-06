@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const SectionAbMe = ({aboutMe, err}) => {
    
@@ -28,4 +29,10 @@ export const SectionAbMe = ({aboutMe, err}) => {
 
         </section>
     );
+};
+
+
+SectionAbMe.propTypes = {
+    aboutMe: PropTypes.array,
+    err: PropTypes.object
 };

@@ -42,4 +42,4 @@ function animPages(collection, target) {
                 elem.style.right = "0%";
 
 
-        }}};
+        }}}

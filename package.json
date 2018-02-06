@@ -21,10 +21,10 @@
     "css-loader": "^0.28.7",
     "eslint": "^4.8.0",
     "eslint-config-airbnb": "^16.0.0",
-    "eslint-loader": "^1.9.0",
+    "eslint-config-defaults": "^9.0.0",
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-import": "^2.7.0",
-    "jslint": "^0.11.0",
+
     "postcss": "^6.0.13",
     "postcss-animation": "0.0.12",
     "postcss-assets": "^5.0.0",
@@ -52,6 +52,8 @@
     "webpack": "^3.6.0"
   },
   "devDependencies": {
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.6.1",
     "express": "^4.16.2",
     "intel": "^1.2.0",
     "webpack-dev-server": "^2.9.1"

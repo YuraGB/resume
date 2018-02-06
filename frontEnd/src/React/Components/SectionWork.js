@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const SectionWork = ({work, err}) => {
   return (
@@ -36,4 +37,10 @@ export const SectionWork = ({work, err}) => {
                   </section>))():[]}
       </section>
   );
+};
+
+
+SectionWork.propTypes = {
+	err: PropTypes.object,
+    work: PropTypes.array
 };

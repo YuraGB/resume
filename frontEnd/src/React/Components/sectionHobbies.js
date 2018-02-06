@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const SectionHobbies = ({hobbies, err}) => {
     return(
@@ -38,4 +39,10 @@ export const SectionHobbies = ({hobbies, err}) => {
         </section>
 
     );
+};
+
+
+SectionHobbies.propTypes = {
+	err: PropTypes.object,
+    hobbies: PropTypes.array
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from "redux-thunk";
@@ -32,7 +32,7 @@ store.dispatch(InitState());
 
 
 const HeaderComponent = connect(
-    state => state,
+    state => state
 )(Header);
 
 const BodyComponent = connect(

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const MainNavSection = ({onClick}) => {
   return (
@@ -9,4 +10,8 @@ export const MainNavSection = ({onClick}) => {
 
       </nav>
   );
+};
+
+MainNavSection.propTypes = {
+    onClick: PropTypes.func
 };

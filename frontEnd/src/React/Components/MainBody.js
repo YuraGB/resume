@@ -3,6 +3,7 @@ import { SectionHobbies } from './sectionHobbies';
 import { SectionWork } from './SectionWork';
 import { MainNavSection } from './MainNavSection';
 import { SectionAbMe } from './SectionAbMe';
+import PropTypes from 'prop-types';
 
 export const MainBody = ({work, hobbies, aboutMe, dispatchWork, dispatchHobbies, dispatchAbMe, error}) => {
 
@@ -30,4 +31,14 @@ export const MainBody = ({work, hobbies, aboutMe, dispatchWork, dispatchHobbies,
             <SectionWork work={work} err={error}/>
         </article>
    );
+};
+
+MainBody.propTypes = {
+    work: PropTypes.array || PropTypes.object,
+    hobbies: PropTypes.array,
+    aboutMe: PropTypes.array,
+    dispatchWork: PropTypes.func,
+    dispatchHobbies: PropTypes.func,
+    dispatchAbMe: PropTypes.func,
+    error: PropTypes.array
 };
