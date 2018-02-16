@@ -11,14 +11,12 @@ export const MainBody = ({work, hobbies, aboutMe, dispatchWork, dispatchHobbies,
         event.preventDefault();
 
         if (!work.list && (event.target.getAttribute('data-block')==="#work")){
-           return dispatchWork();
+            return dispatchWork();
         }
         else if (!hobbies.list && (event.target.getAttribute('data-block')==="hobbies")){
-
-           return dispatchHobbies();
+            return dispatchHobbies();
         }
-        else if (!!aboutMe.every && (event.target.getAttribute('data-block')==="plForFtr")){
-
+        else if (!aboutMe.My_pluses && (event.target.getAttribute('data-block')==="plForFtr")){
             return dispatchAbMe();
         }
     }
@@ -34,9 +32,9 @@ export const MainBody = ({work, hobbies, aboutMe, dispatchWork, dispatchHobbies,
 };
 
 MainBody.propTypes = {
-    work: PropTypes.array || PropTypes.object,
-    hobbies: PropTypes.array,
-    aboutMe: PropTypes.array,
+    work: PropTypes.object,
+    hobbies: PropTypes.object,
+    aboutMe: PropTypes.object,
     dispatchWork: PropTypes.func,
     dispatchHobbies: PropTypes.func,
     dispatchAbMe: PropTypes.func,

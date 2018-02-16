@@ -30,5 +30,5 @@ export const Header = ({photo}) => {
 };
 
 Header.propTypes = {
-	photo: PropTypes.array
+	photo: PropTypes.object
 };

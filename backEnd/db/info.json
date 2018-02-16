@@ -65,8 +65,8 @@
     },
      "About_me": {
         "Plans for the future": ["Do the job what I like", "Try to travel as much as i can", "make the world better"],
-        "My  minuses": ["Sometimes  my motivation decrease", "I don't often  give people a credit of trust", "I don't have much practice of programming  with team"],
-        "My  pluses": ["I'm friendly", "I'm hard-working", "responsible", "communicable", "with a great desire to work as a programmer"],
+        "My_minuses": ["Sometimes  my motivation decrease", "I don't often  give people a credit of trust", "I don't have much practice of programming  with team"],
+        "My_pluses": ["I'm friendly", "I'm hard-working", "responsible", "communicable", "with a great desire to work as a programmer"],
         "What i Know": {
             "The resource of Ilya Kantor": "https://learn.javascript.ru",
             "Canvas": "https://www.youtube.com/watch?v=Tmr85IaJpWI&list=PLpY_9m7gHQDgKMb4U2u8X8JU0lDlCYFQ4",

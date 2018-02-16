@@ -1,6 +1,6 @@
-import Style from "../style/index.css";
+import "../style/index.css";
 //import { reactRenderMainBody, reactRenderHeader } from "./React/index";
-import { animationMainBlock } from './Animation/animation';
+import  './Animation/animation';
 
 import React from 'react';
 import  ReactDOM  from 'react-dom';
